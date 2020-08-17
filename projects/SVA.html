@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Projects</title>
+  <link rel = "icon" type = "image/png" href = "/icon.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+    .row.content {height: 3300px}
+
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #000000;
+      height: 100%;
+    }
+
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #192841;
+      color: White;
+      padding: 15px;
+    }
+
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height: auto;}
+    }
+
+  </style>
+</head>
+<body>
+<!-- #style="background-image: url('/back.jpg');background-repeat: no-repeat;background-attachment: fixed;background-size: 100% 100%; -->
+<div class="container-fluid" style="background-color:#003366 ;overflow-x: hidden !important;"  >
+  <div class="row content">
+    <div class="col-sm-3 sidenav">
+      <h4 style="color:white;">Robotics</h4>
+      <ul class="nav nav-pills nav-stacked">
+        <li ><a href="/projects/spiderbot.html">Spiderbot</a></li>
+        <li ><a href="/projects/MotionPlanning-RL.html">RL - Motion Planning</a></li>
+        <li><a href="/projects/Biped.html">Project Biped</a></li>
+        <li><a href="/projects/HMT.html">Human Machine Teaming</a></li>
+        <li><a href="/projects/JDE.html">OpenCV Racecar simulation</a></li>
+        <li class="active"><a href="/projects/SVA.html">Smart Vision analysis</a></li>
+        <li ><a href="/projects/Holter-monitor.html">Project Holter monitor</a></li>
+        <li ><a href="/projects/Aero.html">Aerodynamics</a></li>
+        <li ><a href="/projects/PS1.html">Practice School Internship</a></li>
+      </ul><br>
+    </div>
+
+    <div class="col-sm-9">
+
+      <h2 align = "center" style="color:white;"><u>Smart Vision Analysis</u></h2> <br>
+      <p style="font-size:20px;color:white;">
+      This project is related to neuroscience and explores brain computer interfacing.
+      It aims to analyse the reception
+      of images and colors to the brain to Improve computer vision techniques.<br>
+
+      </p>
+      <br>
+      <h3 style="color:white;">Methodology:</h3>
+      <p style="font-size:20px;color:white;text-align:justify;">
+        An experiment is designed to observe the brainwave changes for a subject, who is being subjected to changing visual stimuli. The observed brainwave changes are recorded,this data is then used to develop a machine learning model which will train itself to gain the ability of judging the visual stimulus the subject was subjected to by merely observing the subject’s brainwave data. This experiment will be further used to improve the efficiency of image perception and incorporate it with BCI .
+
+
+      </p>
+      <br> <br>
+      <h3 style="color:white;"> Procedure: </h3>
+      <p style="font-size:20px;color:white;">
+        The project consists of a few steps:<br>
+        1.Using a Geodesic sensor net headset, we record data depicting the
+        behaviour of brain nodes when shown different pictures and colors. Then
+        we create an ML algoritm that tries the same sensory techniques used by
+        the brain to detect the colors.<br>
+        2. The ML algorithm is modified to now also analyse various objects in
+        images.<br>
+        3.This final ML algorithm that imitates the brain's behaviour while
+        analysing objects is compared to other computer vision softwares.
+
+      </p>
+      <h3 style="color:white;"> Sensory Data: </h3>
+
+      <br><br>
+
+      <style>
+      .container {
+        position: relative;
+      }
+
+      .bottomright {
+        position: absolute;
+        bottom: 8px;
+        right: 180px;
+        font-size: 18px;
+      }
+      img {
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 5px;
+        width: 450px;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      </style>
+
+      <div class="container">
+        <img src="/assets/img/SVA1.png" alt="Spider Robot" > <br><br>
+        <img src="/assets/img/SVA2.png" alt="Spider Robot" >
+      </div>
+
+      <br><br>
+
+      <p style="font-size:20px;color:white;text-align:justify;">
+        The Y values here are the brain wave data that was recorded using the Geodesic sensor net, the observed values were converted to python arrays to plot them.
+        The X values can be considered analogous to time.
+
+      </p>
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+
+<footer class="container-fluid" style="text-align: center;">
+  <a href="mailto:bhavyas2603@gmail.com"  ><i class="icon fa fa-envelope" style="font-size:36px;color:white;border: 2px solid white;border-radius: 50px;padding: 10px;  "></i></a>
+
+  <a target="_blank" href="https://github.com/bs2603"><i class="icon fa fa-github-alt" style="font-size:36px;color:white;border: 2px solid white;border-radius: 50px;padding: 10px;  "></i></a>
+  <a target="_blank" href="tel:+918949485816"><i class="icon fa fa-phone" style="font-size:36px;color:white;border: 2px solid white;border-radius: 50px;padding: 10px; "></i></a>
+  <p>Build with Jekyll and <span class="love" style="color:tomato;">❤</span> by <a href="https://github.com/bs2603">Bhavya Sharma</a></p>
+</footer>
+
+
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Projects</title>
+  <link rel = "icon" type = "image/png" href = "/icon.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+    .row.content {height: 3300px}
+
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #000000;
+      height: 100%;
+    }
+
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #192841;
+      color: White;
+      padding: 15px;
+    }
+
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height: auto;}
+    }
+
+  </style>
+</head>
+<body>
+<!-- #style="background-image: url('/back.jpg');background-repeat: no-repeat;background-attachment: fixed;background-size: 100% 100%; -->
+<div class="container-fluid" style="background-color:#003366 ;overflow-x: hidden !important;"  >
+  <div class="row content">
+    <div class="col-sm-3 sidenav">
+      <h4 style="color:white;">Robotics</h4>
+      <ul class="nav nav-pills nav-stacked">
+        <li ><a href="/projects/spiderbot.html">Spiderbot</a></li>
+        <li class="active"><a href="/projects/MotionPlanning-RL.html">RL - Motion Planning</a></li>
+        <li><a href="/projects/Biped.html">Project Biped</a></li>
+        <li><a href="/projects/HMT.html">Human Machine Teaming</a></li>
+        <li><a href="/projects/JDE.html">OpenCV Racecar simulation</a></li>
+        <li><a href="/projects/SVA.html">Smart Vision analysis</a></li>
+        <li ><a href="/projects/Holter-monitor.html">Project Holter monitor</a></li>
+        <li><a href="/projects/Aero.html">Aerodynamics</a></li>
+        <li><a href="/projects/PS1.html">Practice School Internship</a></li>
+    </ul><br>
+    </div>
+
+    <div class="col-sm-9">
+
+      <h2 align = "center" style="color:white;"><u>Motion Planning of Legged Robots using RL</u></h2> <br>
+      <p style="font-size:20px;color:white;">
+      This project has started recently, I am researching on the motion planning of different legged robots on legged terrains.
+      I am working on this project under the guidance of professor R.Warrier of my university , BITS Goa.<br>
+
+      This project aims to explore motion of different legged Robots, and study different gaits.<br>
+      Moreover the research aims to use Reinforcement learning to simulate a bot and teach it locomotion.
+
+      </p>
+      <br>
+      <!-- <h3 style="color:white;">What is Spiderbot:</h3>
+      <p style="font-size:20px;color:white;text-align:justify;">
+
+      Spiderbot is a biomimetic quadruped robot, which follows the creep gait to move
+      like a spider.<br>
+      The end expectation from the robot would be an aptly sized quadruped which can locomote
+      on all kinds of terrains without any difficulty while camouflaging itself in the given
+      environment.:<br><br>
+      Uses:<br>
+      This bot can be used in a variety of scenarios<br>
+      1. Surveillance in household or office environments<br>
+      2. Delivery and procurement of messages or information <br>
+      3. A smartbot which works like a homeautomation deevice <br>
+      4. A testing platform for swarm robotics <br>
+      5. A testing platform for different control algorithms <br>
+      </p>
+      <br> <br>
+      <h3 style="color:white;"> Work on Spiderbot - Timeline </h3>
+      <p style="font-size:20px;color:white;">
+      October 2019 - First prototype made:
+      </p>
+
+      <br><br>
+
+      <style>
+      .container {
+        position: relative;
+      }
+
+      .bottomright {
+        position: absolute;
+        bottom: 8px;
+        right: 180px;
+        font-size: 18px;
+      }
+      img {
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 5px;
+        width: 450px;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      </style>
+
+      <div class="container">
+        <img src="/assets/img/Spiderbot.png" alt="Spider Robot" >
+
+      </div>
+
+      <br><br>
+
+      <p style="font-size:20px;color:white;text-align:justify;">
+
+      The above is the first prototype of Spiderbot I made , it took around 20 days.<br><br>
+      Build :<br>
+      -The body was 3-D printed : I tried to keep the fill density low and the design of
+       legs and body was such that it had minimum volume, to keep the bot as light as possible.<br>
+       <br>
+      -Electronics : Here I have used an Arduino Uno, but I also tried making the same with Arduino Pro mini <br>
+       which was successful.<br>
+      - I have used sg90 servo motors for the actuation.<br>
+      <br>
+      Difficulties faced what I learnt  :<br>
+      This robot when first made would Gitter a lot, after a lot of effort I realised how my power distribution
+      to the robot was not perfectly planned. I added a UBEC to the bot and upgraded the battery which balanced
+      the current supply between the motors and the bot worked properly <br>
+      </p>
+      <h3 style="color:white;"> Working bot: </h> <br><br><br>
+      <style>
+      .spiderwork {
+        margin-left: auto;
+        margin-right: auto;
+        display: block
+
+      }
+      video {
+        max-width: 100%;
+        height: auto;
+      }
+
+      </style>
+      <video class='spiderwork' width="800"  controls>
+        <source src="/assets/vid/Spiderbot-Website.mp4" type="video/mp4" align = "center">
+      Your browser does not support the video tag.
+      </video>
+
+      <br>
+
+      <p style="font-size:20px;color:white;text-align:justify;">
+        The above is another model of spiderbot I made, as you can see the bot has a
+        tendency to rotate anti-clockwise during its motion. I am working on balance
+        and contact modelling of the bot to resolve this.
+
+      </p>
+
+      <br>
+      <h3 style="color:white;"> Close view: </h> <br><br><br>
+      <style>
+      .spiderclose {
+        margin-left: auto;
+        margin-right: auto;
+        display: block
+
+      }
+      video {
+        max-width: 100%;
+        height: auto;
+      }
+
+      </style>
+      <video class='spiderclose' width="800"  controls>
+        <source src="/assets/vid/spiderbot-close.mp4" type="video/mp4" align = "center">
+      Your browser does not support the video tag.
+      </video>
+
+      <br>
+
+      <p style="font-size:20px;color:white;text-align:justify;">
+       The above is a close up of a step. As you can see the spider falls behind at a point in between
+       which is because the COG shifts too far behind. But this can be resolved by changing the
+       motion planning in the code better and working on the symmetry of the robot.
+      </p>
+      <br>
+
+
+      <h3 style="color:white;"> Current Work: </h><br><br>
+      <style>
+      .center {
+        margin-left: auto;
+        margin-right: auto;
+        display: block
+      }
+      video {
+        max-width: 100%;
+        height: auto;
+      }
+      </style>
+      <video class='center' width="400"  controls>
+        <source src="/assets/vid/spider-sim.mp4" type="video/mp4" align = "center">
+      Your browser does not support the video tag.
+      </video>
+      <br><br>
+      <p style="font-size:20px;color:white;">
+      At the moment I am working on simulation of the Robot.
+      </p>
+
+
+          </div>
+        </div>
+      </div>
+    </div> -->
+  </div>
+</div>
+</body>
+
+<footer class="container-fluid" style="text-align: center;">
+  <a href="mailto:bhavyas2603@gmail.com"  ><i class="icon fa fa-envelope" style="font-size:36px;color:white;border: 2px solid white;border-radius: 50px;padding: 10px;  "></i></a>
+
+  <a target="_blank" href="https://github.com/bs2603"><i class="icon fa fa-github-alt" style="font-size:36px;color:white;border: 2px solid white;border-radius: 50px;padding: 10px;  "></i></a>
+  <a target="_blank" href="tel:+918949485816"><i class="icon fa fa-phone" style="font-size:36px;color:white;border: 2px solid white;border-radius: 50px;padding: 10px; "></i></a>
+  <p>Build with Jekyll and <span class="love" style="color:tomato;">❤</span> by <a href="https://github.com/bs2603">Bhavya Sharma</a></p>
+</footer>
+
+
+</html>

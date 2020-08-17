@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Projects</title>
+  <link rel = "icon" type = "image/png" href = "/icon.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+    .row.content {height: 3300px}
+
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #000000;
+      height: 100%;
+    }
+
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #192841;
+      color: White;
+      padding: 15px;
+    }
+
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height: auto;}
+    }
+
+  </style>
+</head>
+<body>
+<!-- #style="background-image: url('/back.jpg');background-repeat: no-repeat;background-attachment: fixed;background-size: 100% 100%; -->
+<div class="container-fluid" style="overflow-x: hidden !important;"  >
+  <div class="row content">
+    <div class="col-sm-3 sidenav">
+      <h4 style="color:white;">Robotics</h4>
+      <ul class="nav nav-pills nav-stacked">
+        <li ><a href="/projects/spiderbot.html">Spiderbot</a></li>
+        <li ><a href="/projects/MotionPlanning-RL.html">RL - Motion Planning</a></li>
+        <li><a href="/projects/Biped.html">Project Biped</a></li>
+        <li><a href="/projects/HMT.html">Human Machine Teaming</a></li>
+        <li class="active"><a href="/projects/JDE.html">OpenCV Racecar simulation</a></li>
+        <li><a href="/projects/SVA.html">Smart Vision analysis</a></li>
+        <li ><a href="/projects/Holter-monitor.html">Project Holter monitor</a></li>
+        <li ><a href="/projects/Aero.html">Aerodynamics</a></li>
+        <li ><a href="/projects/PS1.html">Practice School Internship</a></li>
+      </ul><br>
+    </div>
+
+    <div class="col-sm-9">
+
+      <h2 align = "center" ><u>OpenCV Racecar simulation</u></h2> <br>
+      <p style="font-size:20px;">
+      This project is my work with an organisation - Unibotics, which is a learning academy for Robotics.
+
+      </p>
+      <br>
+
+      <style>
+      .container {
+        position: relative;
+      }
+
+      .bottomright {
+        position: absolute;
+        bottom: 8px;
+        right: 180px;
+        font-size: 18px;
+      }
+      img {
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 5px;
+        width: 450px;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      </style>
+
+      <div class="container">
+        <img src="/assets/img/Unibots.png" alt="Racecar Simulation" >
+
+      </div>
+
+      <br><br>
+
+      <p style="font-size:20px;text-align:justify;">
+        There is a simulation of a world with an arbitary Racetrack, and the task is to code
+        an algorithm to simulate the motion of a racecar on it, making sure the car doesn't
+        deviate from the path. <br>
+        The only inputs you can give to the car are linear and angular velocity.<br>
+        The only sensory data you got from the car was the image of the road right in front
+        from a camera mounted in front of the car.
+      </p>
+      <h3  My approach: </h> <br><br><br>
+      <style>
+      .spiderwork {
+        margin-left: auto;
+        margin-right: auto;
+        display: block
+
+      }
+      video {
+        max-width: 100%;
+        height: auto;
+      }
+
+      </style>
+      <video class='spiderwork' width="800"  controls>
+        <source src="/assets/vid/JDE.mp4" type="video/mp4" align = "center">
+      Your browser does not support the video tag.
+      </video>
+
+      <br><br>
+
+      <p style="font-size:20px;text-align:justify;">
+        I used the OpenCV library to map the image taken by the camera , and found the coordinates of
+        center of the road ahead.Then I coded an inverse algorithm to direct the car to the center.
+
+      </p>
+
+      <br>
+      <h3 > Code: </h> <br><br><br>
+
+      <code>
+
+        import threading <br>
+        import time <br>
+        import math<br>
+        import cv2<br>
+        import numpy as np<br>
+        from datetime import datetime<br>
+
+        from interfaces.motors import PublisherMotors<br>
+        from follow_line import FollowLine<br>
+        from printer import printImage<br>
+        time_cycle = 80<br>
+
+        %matplotlib inline<br>
+        fl = FollowLine()<br>
+        fl.play()<br>
+        Minred = np.array([0,235,60])<br>
+        Maxred = np.array([180,255,255])<br>
+        def execute(self):<br>
+
+            img = self.getImage()<br>
+            hsv = cv2.cvtColor(img, cv2.COLOR_RGB2HSV)<br>
+            mask = cv2.inRange(hsv, Minred, Maxred)<br>
+            #plt.imshow(mask)<br>
+            #plt.show()<br>
+            self.set_color_image(img)<br>
+            self.set_threshold_image(mask)<br>
+            whites = np.argwhere(mask == 255)<br>
+            try:<br>
+                xm = np.median(whites[:,1]) / mask.shape[1]<br>
+
+                if(xm < 0.3):<br>
+                    self.motors.sendV(2.5)<br>
+                    self.motors.sendW(0.9*np.sqrt(0.5 - xm))<br>
+                elif(xm > 0.7):<br>
+                    self.motors.sendV(2.5)<br>
+                    self.motors.sendW(-0.9* np.sqrt((xm - 0.5)))<br>
+                else:<br>
+                    self.motors.sendW(0)<br>
+                    self.motors.sendV(4)<br>
+            except:<br>
+                self.motors.sendV(4)<br>
+                pass<br>
+        fl.setExecute(execute)<br>
+
+      </code>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+
+<footer class="container-fluid" style="text-align: center;">
+  <a href="mailto:bhavyas2603@gmail.com"  ><i class="icon fa fa-envelope" style="font-size:36px;color:white;border: 2px solid white;border-radius: 50px;padding: 10px;  "></i></a>
+
+  <a target="_blank" href="https://github.com/bs2603"><i class="icon fa fa-github-alt" style="font-size:36px;color:white;border: 2px solid white;border-radius: 50px;padding: 10px;  "></i></a>
+  <a target="_blank" href="tel:+918949485816"><i class="icon fa fa-phone" style="font-size:36px;color:white;border: 2px solid white;border-radius: 50px;padding: 10px; "></i></a>
+  <p>Build with Jekyll and <span class="love" style="color:tomato;">❤</span> by <a href="https://github.com/bs2603">Bhavya Sharma</a></p>
+</footer>
+
+
+</html>
