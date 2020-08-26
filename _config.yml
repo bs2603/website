@@ -1,20 +1,18 @@
 # Site settings
 title: Portfolio
-description: A blog about lorem ipsum dolor sit amet
+description: My portfolio Website
 # baseurl: "/particle" # the subpath of your site, e.g. /blog
 # url: "localhost:3000" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
 
 # User settings
 username: Bhavya Sharma
-user_description: Hey! I'm Bhavya, an undergrad student, keenly Interested in Robotics,Particularly in control of Biomimetic Robots and Underactuated robotics.I am Currently working on control of legged robots.Apart from Robotics, I enjoy programming and development. You can check my projects below!
+user_description: Hey! I'm Bhavya, an undergrad student, keenly Interested in Robotics,Particularly in control of Biomimetic Robots and Underactuated robotics.I am Currently working on control of legged robots.Apart from Robotics, I enjoy programming and development. You can check my projects
 user_title: Robotics Enthusiast
 email: bhavyas2603@gmail.com
 #twitter_username: lorem_ipsum
 github_username:  bs2603
 #gplus_username:  lorem_ipsum
 
-# Google-analytics
-google-analytics: yes
-  id: "UA-176145032-1"
+
 
 exclude: ['package.json', 'src' , 'node_modules']
