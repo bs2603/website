@@ -1,4 +1,4 @@
-Hey! I'm Bhavya, an undergrad student, keenly Interested in Robotics,Particularly in control of Biomimetic Robots and Underactuated robotics.I am Currently working on control of legged robots.Apart from Robotics, I enjoy programming and development. You can check my website here:
+Hey! I'm Bhavya, an undergraduate student, keenly interested in Robotics,Particularly in control of Biomimetic Robots and underactuated robotics.I am currently working on control of legged robots.Apart from Robotics, I enjoy programming and development. You can check my website here:
 
 https://bs2603.github.io/
 
