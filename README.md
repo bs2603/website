@@ -1,10 +1,11 @@
-Hey, I'm Bhavya!
-I'm a full stack software developer with two years of experience. I work on end to end web development and Azure based network architechture.
-I am also enthusiastic about entrepreneurship and am looking forward to starting my own venture or joining a promising idea.
+Hey! I'm Bhavya, a final year undergraduate student, keenly interested in Programming and Software development.
 
-Other than these, 
-I love to hit the gym and am always up for a game of chess!
+I am currently looking for job opportunities as an SDE , I can join full time from may 2022.
 
-email:  bhavyas2603@gmail.com
-number: +91-8949485816
-chess.com: @coppenhager
+You can check my website at :
+
+https://bs2603.github.io/
+
+Feel free to contact me at :
+
+Mail: bhavyas2603@gmail.com

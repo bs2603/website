@@ -1,21 +1,13 @@
 # Site settings
-title: Bhavya Sharma's portfolio
-description: Hey, I'm Bhavya!
-I'm a full stack software developer with two years of experience. I work on end to end web development and Azure based network architechture.
-I am also enthusiastic about entrepreneurship and am looking forward to starting my own venture or joining a promising idea.
-
-Other than these, 
-I love to hit the gym and am always up for a game of chess!
-
-email -  bhavyas2603@gmail.com
-number -  +91-8949485816
-chess.com - @coppenhager
-
+title: Portfolio
+description: My portfolio Website
+# baseurl: "/particle" # the subpath of your site, e.g. /blog
+# url: "localhost:3000" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
 
 # User settings
 username: Bhavya Sharma
-user_description: portfolio
-user_title: Software Developer / Startup Enthusiast
+user_description: Hey! I'm Bhavya, a final year undergrad student.I have experience in Web Development,Software Development and Data Structures and Algorithms. I am looking for a job for the role of SDE1, I can join full-time from May 2022. 
+user_title: Software Developer / Programming Enthusiast
 email: bhavyas2603@gmail.com
 #twitter_username: lorem_ipsum
 github_username:  bs2603
